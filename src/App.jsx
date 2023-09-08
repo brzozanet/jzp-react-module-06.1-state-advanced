@@ -16,11 +16,11 @@ function App() {
     return (
         <>
             <div className={styles.container}>
-                <List
-                    recipes={recipes}
-                    onSelectRecipe={(id) => setSelectedRecipeId(id)}
-                />
                 <RecipeContext.Provider value={selectedRecipe}>
+                    <List
+                        recipes={recipes}
+                        onSelectRecipe={(id) => setSelectedRecipeId(id)}
+                    />
                     <Cookbook heading="Książka kucharska" />
                 </RecipeContext.Provider>
             </div>
