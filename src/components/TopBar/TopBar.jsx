@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import styles from "./TopBar.module.css";
+import { useState } from "react";
 import { Button } from "../Button/Button";
-import { IsLoggedInStateContext } from "../../context/IsLoggedInStateContext";
+import styles from "./TopBar.module.css";
 
 export function TopBar() {
-    const [isLoggedIn, setIsLoggedIn] = useContext(IsLoggedInStateContext);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+
     return (
         <div className={styles.wrapper}>
             <span className={styles.title}>Reactowe przepisy</span>
