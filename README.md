@@ -1,4 +1,4 @@
-# Moduł 6.1 - Stan, ale trudniejszy !
+# Moduł 6.1 - Stan, ale trudniejszy
 
 Żeby skorzystać z kodu, pobierz repo a następnie wpisz:
 
