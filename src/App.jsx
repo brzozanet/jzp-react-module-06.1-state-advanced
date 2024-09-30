@@ -11,16 +11,13 @@ function App() {
     (recipe) => recipe.id === selectedRecipeId
   );
 
-  // const { name, ingredients, description, img, country, time } = selectedRecipe;
-
   return (
     <div className={css.container}>
       <List
         recipes={recipes}
         onSelectRecipe={(id) => setSelectedRecipeId(id)}
       />
-      <Cookbook {...selectedRecipe} />
-      {/* <Cookbook {...selectedRecipe} country="POLSKA" /> */}
+      <Cookbook />
     </div>
   );
 }

@@ -1,7 +1,15 @@
 import { nanoid } from "nanoid";
 import css from "./Recipe.module.css";
+import { RecipeContext } from "../../context/RecipeContext";
+import { useContext } from "react";
 
-export function Recipe({ name, ingredients, description, img, country, time }) {
+export function Recipe() {
+  const { id, name, ingredients, description, img, country, time } =
+    useContext(RecipeContext);
+
+  console.log(RecipeContext);
+  console.log(id);
+
   return (
     <>
       <h2>{name}</h2>
