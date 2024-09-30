@@ -15,6 +15,7 @@ export function Recipe() {
       <h2>{name}</h2>
       <h3>Kraj pochodzenia: {country}</h3>
       <img src={img} alt="" className={css.img} />
+      <p className={css.time}>Czas przygotowania: {time} minut</p>
       <span>Składniki:</span>
       <ul className={css.list}>
         {ingredients.map((ingredient) => (
@@ -22,7 +23,6 @@ export function Recipe() {
         ))}
       </ul>
       <p className={css.description}>{description}</p>
-      <p className={css.time}>Czas przygotowania: {time}</p>
     </>
   );
 }
