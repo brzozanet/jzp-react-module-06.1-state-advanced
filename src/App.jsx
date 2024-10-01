@@ -19,7 +19,7 @@ function App() {
           recipes={recipes}
           onSelectRecipe={(id) => setSelectedRecipeId(id)}
         />
-        <Cookbook />
+        <Cookbook heading={"Książka kucharska"} />
       </div>
     </RecipeContext.Provider>
   );
