@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import css from "./Recipe.module.css";
 
-export function Recipe({ name, ingredients, description, img, country, time }) {
+export function Recipe() {
   return (
     <>
       <h2>{name}</h2>
