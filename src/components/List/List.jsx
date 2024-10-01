@@ -5,7 +5,6 @@ import { RecipeContext } from "../../context/RecipeContext";
 
 export function List({ recipes, onSelectRecipe }) {
   const recipe = useContext(RecipeContext);
-  console.log(recipe.id);
 
   return (
     <nav className={css.nav}>
