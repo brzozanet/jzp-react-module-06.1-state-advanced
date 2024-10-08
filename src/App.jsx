@@ -4,6 +4,7 @@ import { recipes } from "./data/recipes";
 import { List } from "./components/List/List";
 import { Cookbook } from "./components/Cookbook/Cookbook";
 import { RecipeContext } from "./context/RecipeContext";
+import { Recipe } from "./components/Recipe/Recipe";
 
 function App() {
   const [selectedRecipeId, setSelectedRecipeId] = useState(1);
@@ -12,16 +13,26 @@ function App() {
     (recipe) => recipe.id === selectedRecipeId
   );
 
+  const promotedRecipe = recipes.find((recipe) => recipe.id === 4);
+
   return (
-    <RecipeContext.Provider value={selectedRecipe}>
+    <>
       <div className={css.container}>
-        <List
-          recipes={recipes}
-          onSelectRecipe={(id) => setSelectedRecipeId(id)}
-        />
-        <Cookbook heading={"Książka kucharska"} />
+        <RecipeContext.Provider value={selectedRecipe}>
+          <List
+            recipes={recipes}
+            onSelectRecipe={(id) => setSelectedRecipeId(id)}
+          />
+          <Cookbook heading={"Książka kucharska"} />
+        </RecipeContext.Provider>
       </div>
-    </RecipeContext.Provider>
+      <div className={css.promoted}>
+        <RecipeContext.Provider value={promotedRecipe}>
+          <p>Przepis tygodnia</p>
+          <Recipe />
+        </RecipeContext.Provider>
+      </div>
+    </>
   );
 }
 
